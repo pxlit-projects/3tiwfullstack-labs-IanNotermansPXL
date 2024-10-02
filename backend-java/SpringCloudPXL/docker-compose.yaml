@@ -1,0 +1,34 @@
+
+services:
+  employeeservice_db:
+    image: mysql:latest
+    ports:
+      - "3306:3306"  # Can be left as it is for this one
+    environment:
+      MYSQL_DATABASE: 'employeeservice_db'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+
+  organizationservice_db:
+    image: mysql:latest
+    ports:
+      - "3307:3306"  # Different port for this container
+    environment:
+      MYSQL_DATABASE: 'organizationservice_db'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+
+  departmentservice_db:
+    image: mysql:latest
+    ports:
+      - "3308:3306"  # Different port for this container
+    environment:
+      MYSQL_DATABASE: 'departmentservice_db'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+
+  notificationservice_db:
+    image: mysql:latest
+    ports:
+      - "3309:3306"  # Different port for this container
+    environment:
+      MYSQL_DATABASE: 'notificationservice_db'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+
